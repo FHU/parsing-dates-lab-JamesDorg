@@ -22,6 +22,7 @@ Output
 03/01/1990  
 04/02/1995  
 12/13/2003
+yay
 '''
 #YOU MAY USE THIS FUNCTION IF YOU WANT TO OR YOU MAY REMOVE IT
 def parse_month(month):
