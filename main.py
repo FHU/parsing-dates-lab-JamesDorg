@@ -36,9 +36,31 @@ def parse_month(month):
 #parse_date function should return the date formated as MM/DD/YYYY
 #DO NOT REMOVE THIS FUNCTION
 def parse_date(user_string):
-    pass
+    
+    dates = user_string.split()
+    month = parse_month(dates[0])
+    dAy = dates[1][:-1]
+    if int(dAy) < 10:
+        day = "0" + dAy
+    else:
+        day = dAy
+    year = dates[2]
+
+    date = month + "/" + day + "/" + year
+    
+    return date
+
 
 #REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
-    pass
+    
+    imp = input()
+    imps = []
+    while imp != "-1":
+        print(imp + ', ' + (imp == -1))
+        imps.append(imp)
+        imp = input()
+
+    print(parse_date(imps))
+
 
