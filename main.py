@@ -40,7 +40,11 @@ def parse_date(user_string):
     
     dates = user_string.split()
     month = parse_month(dates[0])
-    dAy = dates[1][:-1]
+    if dates[1][-1] == ',':
+        dAy = dates[1][:-1]
+    else:
+        dAy = dates[1]
+    
     if int(dAy) < 10:
         day = "0" + dAy
     else:
